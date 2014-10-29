@@ -1,0 +1,317 @@
+/* -------------- Color Palette  -------------- */
+@backgroundColor: #482E74;
+@backgroundColor1: #804AD8;
+@backgroundColor2: #120D1C;
+@backgroundColorSplash: #143243;
+@brandRead: #eeeeee;
+
+@inlinedisplay: inline;
+@paddingLeftlarge: 10px;
+@marginTopLarge: 20px;
+@mainWidth: 100%;
+ /**********************
+         STYLES
+***********************/
+
+@my-font-name: Georgia;
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|@{my-font-name}:400,300,700";
+
+ /**********************
+         STYLES
+***********************/
+
+
+body {
+  background-color: @backgroundColor2;
+  color: @brandRead;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ h1 {
+ color: @brandRead;
+ font-size: 1.4em;
+ padding-left: 5px;
+ padding-top: 5px;
+ text-align: center;
+ }
+
+
+ nav {
+ display: inline-block;
+ }
+
+ .genres {
+  position: fixed;
+  background-color: @backgroundColor2;
+  padding-top: 6em;
+  top: 0em;
+  height: 100%;
+  right: -9em;
+  width: 3em;
+  margin: 0;
+  font-size: 1.3em;
+  padding: 0 1em 1em;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s;
+
+ }
+ .genres li {
+  padding-top: 10px;
+ }
+
+ .icon-filter {
+  position: absolute;
+  position: fixed;
+  right: 10px;
+  top: 14px;
+  padding-left: 10px;
+  font-size: 2em;
+  z-index: 10000;
+ }
+
+
+.icon-menu {
+  position: absolute;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  padding-left: 10px;
+  font-size: 2em;
+  z-index: 10000;
+ }
+
+ .mainnav {
+  position: fixed;
+  background-color: @backgroundColor2;
+  padding-top: 6em;
+  top: 0em;
+  height: 100%;
+  left: -9em;
+  width: 3em;
+  text-align: right;
+  margin: 0;
+  font-size: 1.3em;
+  padding: 0 1em 1em;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s;
+  z-index: 9999;
+
+ }
+
+.genres.expand {
+  width: 15em;
+}
+
+.mainnav.expand {
+  width: 15em;
+}
+
+.mainnav li {
+  padding-top: 20px;
+ }
+
+ol, ul {
+  list-style: none;
+  color: @brandRead;
+}
+header {
+  position: fixed;
+  background-color: @backgroundColor2;
+  top: 0;
+  height: 5em;
+  width: 100%;
+}
+  
+a:visited {
+  text-decoration: none;
+  color: @brandRead;
+}
+
+a:active {
+  text-decoration: underline;
+}
+a {
+  color: @brandRead;
+}
+.plm {padding-left: 10px;}
+.prm {padding-right: 10px;}
+.plxl {padding-left: 20px !important;}
+.pbxl {padding-bottom: 20px !important;}
+
+
+ main{
+  
+    width: 60em;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    section {
+
+      .movie {
+      background-color: @backgroundColor;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+
+      
+        a {
+        color: @brandRead;
+        text-decoration: none;
+
+    
+
+          .more {
+          text-decoration: none;
+          }
+
+       }
+
+      }
+      
+    }
+}
+
+#splashscreen {
+  height: 100%;
+  width: 100%;
+  background-color: @backgroundColorSplash;
+  position: absolute;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  display: none;
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin-left: -150px;
+    margin-top: -100px;
+    h1 {
+      margin-bottom: 75px;
+      color: @brandRead;
+    }
+    p {
+      color: @brandRead;
+    }
+  }
+  &.showsplashscreen {
+    display: block;
+  }
+  &.hide {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.detail {
+      background-color: @backgroundColor;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+}
+
+.actors {
+          display: none;
+        }
+
+.none {
+  display: none
+}
+
+ .active {
+
+ display: block;
+ }
+
+ @media (max-width: 480px){
+
+ body{
+   width: 100%;
+ }
+
+
+ .movie {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+ }
+
+
+figure {
+  display: block;
+
+}
+
+main {
+  width: 100%;
+ }
+.actors {
+ display: none;
+ }
+ }
+
+ @media (min-width: 481px) and (max-width: 768px){
+  
+ .movie {
+ width: 100%;
+
+ .date{
+ left: 0;
+ padding-top: 10px;
+ padding-left: 10px; 
+ position: absolute;
+ }
+
+ .actors {
+  display: none;
+  text-align: center;
+
+ }
+
+   h1 {
+   display: inline-flex;
+   }
+
+   
+
+   figure {
+    display: inline-flex;
+
+
+    float: right;
+   }
+}
+
+ h1 {
+ font-size: 2em;
+ }
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
