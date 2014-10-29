@@ -7,13 +7,13 @@
 var APP = APP || {};
 
 (function() {
-
+	//sla hier bepaalde settings op
 	APP.settings = {
 		movieUrl : 'http://www.dennistel.nl/movies'
 	}
 
 
-
+	//controle de app
 	APP.controller = {
 		init: function() {
 			console.log ('kickoff app');
@@ -176,7 +176,7 @@ var APP = APP || {};
 			});
 		}
 	}
-
+	//hier worden de verschillende secties in de html voorzien van data dmv. transparency
 	APP.sections = {
 		init: function() {
 			console.log('kickoff sections');
@@ -415,28 +415,31 @@ var APP = APP || {};
 	}
 
 
-// APP.worker = {
+APP.worker = {
 
-// init: function(){
+init: function(){
 
-// this.newWorker();
+this.newWorker();
 
-// },
+},
 
-// newWorker: function(){
+newWorker: function(){
 
-// var worker = new Worker('js/vendor/task.js');
+//webworkers gebruiken om taken uit te laten voeren paralel aan je javascript
 
-// worker.addEventListener('message', function(e) {
-//   console.log('Worker said: ', e.data);
-// }, false);
+var worker = new Worker('js/vendor/task.js');
 
-// worker.postMessage('Hello World');
+worker.addEventListener('message', function(e) {
+  console.log('Worker said: ', e.data);
+}, false);
 
-// }
+worker.postMessage('Hello World');
 
-// }
+}
 
-	APP.controller.init(); // initialiseer de app - start de app
+}
+
+	APP.controller.init();
+	APP.worker.init(); // initialiseer de app - start de app
 
 	})();
